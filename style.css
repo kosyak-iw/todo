@@ -66,7 +66,10 @@
 .todo-list__item-name {
     flex-grow: 1;
     height: 80px;
-    text-decoration: line-through;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 25px;
 }
 
 .todo-list__item-close {
@@ -78,6 +81,10 @@
 
 }
 
-.todo-list__item_completed {
+.todo-list__item_completed > .todo-list__item-name {
+    text-decoration: line-through;
+}
+.todo-list__item_completed > .todo-list__item-complete {
+
     background-color: red;
 }
